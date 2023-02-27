@@ -1,112 +1,47 @@
-# Landscape
+# Bloomy
 
-A brand new default theme for [Hexo].
+* 介绍：hexo主题Bloomy
+* 创作原因：想从零开始创作一个属于自己的hexo主题
+* 演示地址：https://7up-hue.github.io/
 
-- [Preview](http://hexo.io/hexo-theme-landscape/)
+<img src="source/images/image1.png" />
+<img src="source/images/image2.png" />
 
-## Installation
+## 使用
+1. 进入主题目录后，克隆此仓库
+  ```shell
+  cd theme
+  git clone git@github.com:7UP-hue/MyBlog.  git
+  ```
+2. 更改默认配置
+关闭highlight，到博客根目录下的_config.yml,蒋highlight下的enable设为false
+  ```yml
+  # _config.yml
+  highlight:
+    enable: false
+    # line_number: true
+    # auto_detect: false
+    # tab_replace: ''
+    # wrap: true
+    # hljs: false
+  prismjs:
+    enable: true
+    preprocess: true
+    line_number: true
+    tab_replace: ''
+  ```
+  修改完后清除缓存
+  ```shell
+  hexo clean
+  hexo g
+  ```
 
-### Install
+3. 修改配置信息
+  可修改的信息包括：
+  * menu菜单
+  * 网页title
+  * 个人头像，姓名，github地址，csdn地址，推特地址等
+  修改方式：
+  * 在主题目录下的_config.yaml文件中找到对应配置修改即可
 
-``` bash
-$ git clone https://github.com/hexojs/hexo-theme-landscape.git themes/landscape
-```
 
-**Landscape requires Hexo 2.4 and above.** If you would like to enable the RSS, the [hexo-generate-feed] plugin is also required.
-
-### Enable
-
-Modify `theme` setting in `_config.yml` to `landscape`.
-
-### Update
-
-``` bash
-cd themes/landscape
-git pull
-```
-
-## Configuration
-
-``` yml
-# Header
-menu:
-  Home: /
-  Archives: /archives
-rss: /atom.xml
-
-# Content
-excerpt_link: Read More
-fancybox: true
-
-# Sidebar
-sidebar: right
-widgets:
-- category
-- tag
-- tagcloud
-- archives
-- recent_posts
-
-# Miscellaneous
-google_analytics:
-favicon: /favicon.png
-twitter:
-google_plus:
-```
-
-- **menu** - Navigation menu
-- **rss** - RSS link
-- **excerpt_link** - "Read More" link at the bottom of excerpted articles. `false` to hide the link.
-- **fancybox** - Enable [Fancybox]
-- **sidebar** - Sidebar style. You can choose `left`, `right`, `bottom` or `false`.
-- **widgets** - Widgets displaying in sidebar
-- **google_analytics** - Google Analytics ID
-- **favicon** - Favicon path
-- **twitter** - Twiiter ID
-- **google_plus** - Google+ ID
-
-## Features
-
-### Fancybox
-
-Landscape uses [Fancybox] to showcase your photos. You can use Markdown syntax or fancybox tag plugin to add your photos.
-
-```
-![img caption](img url)
-
-{% fancybox img_url [img_thumbnail] [img_caption] %}
-```
-
-### Sidebar
-
-You can put your sidebar in left side, right side or bottom of your site by editing `sidebar` setting.
-
-Landscape provides 5 built-in widgets:
-
-- category
-- tag
-- tagcloud
-- archives
-- recent_posts
-
-All of them are enabled by default. You can edit them in `widget` setting.
-
-## Development
-
-### Requirements
-
-- [Grunt] 0.4+
-- Hexo 2.4+
-
-### Grunt tasks
-
-- **default** - Download [Fancybox] and [Font Awesome].
-- **fontawesome** - Only download [Font Awesome].
-- **fancybox** - Only download [Fancybox].
-- **clean** - Clean temporarily files and downloaded files.
-
-[Hexo]: https://hexo.io/
-[Fancybox]: http://fancyapps.com/fancybox/
-[Font Awesome]: http://fontawesome.io/
-[Grunt]: http://gruntjs.com/
-[hexo-generate-feed]: https://github.com/hexojs/hexo-generator-feed
