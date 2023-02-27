@@ -1,0 +1,35 @@
+<section class="posts">
+  <% page.posts.each(function (post) { %>
+    <article class="post">
+      <div class="post-header">
+        <div class="post-name">
+          <a class="post-title-link" href="<%- url_for(post.path) %>" target="_self">
+            <%= post.title %>
+          </a>
+        </div>
+        <span class="read-all">
+          <a class="post-title-link" href="<%- url_for(post.path) %>" target="_self">
+            阅读全文>
+          </a>
+        </span>
+      </div>
+      <div class="post-meta">
+        <span class="post-time-icon"><i class="fa-solid fa-calendar-days"></i></span>
+        <span class="post-time">
+          <%- date(post.date, "YYYY-MM-DD") %>
+        </span>
+      </div>
+      <div class="post-excerpt">
+        <%- post.excerpt %>
+      </div>
+      <div class="page-tags">
+        <% post.tags.each(function (tag) { %>
+          <span class="tag-items">
+            <%= tag.name %>
+          </span>
+        <% }) %>
+      </div>
+    </article>
+  <% }) %>
+</section>
+<%- partial('/paginator') %>

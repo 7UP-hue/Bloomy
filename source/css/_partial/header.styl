@@ -1,0 +1,59 @@
+.header {
+  height: 60px;
+  color: #333;
+  justify-content: space-between;
+  background-color: rgb(255,255,255);
+  border-bottom: 1px solid #ccc;
+  box-shadow: 5px 10px 20px #ccc;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-family: SimSun;
+  position: fixed;
+  top: 0;
+  size: 0;
+  width: 100%;
+  z-index: 10;
+  display: none;
+  box-sizing: border-box;;
+}
+a {
+  text-decoration: none;
+}
+.menu {
+  --primary-color: #666;
+  --secondary-color: #30AD91;
+  display: flex;
+}
+.logo {
+  color: #30AD91;
+}
+.menu-item-link, {
+  display: flex;
+  color: var(--primary-color);
+  padding: 6px 1em 3px;
+  overflow: hidden;
+}
+.menu-item-link span {
+  transition: all .3s;
+  position: relative;
+}
+.menu-item-link:hover span {
+  transform: translateY(-130%);
+}
+.menu-item-link span::before {
+  position: absolute;
+  content: attr(data-text);
+  transform: translateY(130%);
+  color: var(--secondary-color);
+  transition: all .3s;
+}
+
+.menu li {
+  font-size: 16px;
+}
+li {
+  list-style: none;
+}
+.header-last
+  display: flex;

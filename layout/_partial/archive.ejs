@@ -1,0 +1,38 @@
+<section class="archive">
+  <ul class="post-archive">
+    <% var last_year; %>
+    <% var last_month; %>
+    <% page.posts.each(function (post, i) { %>
+      <% var year = post.date.year(); %>
+      <% var month = post.date.month()+1; %>
+      <% if (last_year != year || last_month != month){ %>
+        <% if (last_year != null && last_month != null){ %>
+        </div>
+        <% } %>
+      <% last_year = year; %>
+      <% last_month = month; %>
+        <div class="year-items">
+          <!-- <a class="post-title" href="<%- url_for(post.path) %>">
+            <%= post.title %>
+          </a> -->
+          <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="post-name" target="_self">
+            <%= year + '-' + month %>
+          </a>
+        <div class="archive-items">
+      <% } %>
+      <li>
+        <span>
+          <%= date(post.date, "YYYY-MM-DD") %>
+        </span>
+        <span>
+          <a class="post-title-small" href="<%- url_for(post.path) %>" target="_self">
+            <%= post.title %>
+          </a>
+        </span>
+      </li>
+    <% }) %>
+    <% if (page.posts.length){ %>
+      </div>
+    <% } %>
+  </ul>
+</section>

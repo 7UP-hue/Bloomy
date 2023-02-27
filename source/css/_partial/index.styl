@@ -1,0 +1,169 @@
+.posts {
+  padding: 20px;
+  border-radius: 5px;
+  min-height: 65vh;
+}
+.post {
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 4px 4px #ddd;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  padding: 20px;
+  background: #fff;
+  transition: all .5s;
+}
+.post:hover {
+  box-shadow: 0px 5px 10px 6px #ccc;
+}
+.post-title-link {
+  color: #333;
+}
+.post-time-icon {
+  font-size: 1rem;
+  margin-right: 5px;
+  color: #666;
+}
+.post-time {
+  font-size: 14px;
+  margin-top: 5px;
+}
+.post-excerpt {
+  font-size: 16px;
+  margin-top: 5px;
+}
+.post-excerpt p {
+  margin: 0;
+}
+.page-tags {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #ccc;
+  font-size: 16px;
+}
+.tag-items {
+  padding: 2px 7px;
+  background-color: #D8ECE3;
+  margin-right: 15px;
+  font-size:  14px;
+  color: #999;
+  border-radius: 3px;
+}
+.post-header {
+  display: flex;
+  justify-content: space-between;
+}
+.read-all {
+  font-size: 14px;
+  height:  35px;
+  line-height: 35px;
+  padding: 0px 8px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  transition: all .5s;
+}
+.read-all:hover {
+  border: 1px solid #54BBA4;
+}
+.read-all:hover a {
+  color: #54BBA4;
+}
+.show-sth {
+  height: 100vh;
+  position: relative;
+  margin-top: -80px;
+  text-align: center;
+}
+
+.show-title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  color: #FFF;
+  text-align: center;
+  font-family: "lato", sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+  letter-spacing: 10px;
+  margin-top: -60px;
+  padding-left: 10px;
+}
+.title-rase-in {
+  position: relative;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+}
+.title-rase-in span {
+  white-space: pre;
+  animation: fadeIn 2.4s forwards;
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity 0;
+  transform: scale(0);
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    } 
+  }
+}
+.title-rase-in::before, .title-rase-in::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  width: 1.5px;
+  height: 100%;
+  background: rgba(255,255,255,.5);
+  opacity: 0;
+  transform: scale(0);
+}
+.title-rase-in::before {
+  left: 50%;
+  animation: slideLeft 2.1s cubic-bezier(0.7, -0.6, 0.3, 1.5) forwards;
+  @keyframes slideLeft {
+    to {
+      left: -6%;
+      opacity: 1;
+      transform: scale(0.9);
+    }
+  }
+}
+.title-rase-in::after {
+  right: 50%;
+  animation: slideRight 2.1s cubic-bezier(0.7, -0.6, 0.3, 1.5) forwards;
+  @keyframes slideRight {
+    to {
+      right: -6%;
+      opacity: 1;
+      transform: scale(0.9);
+    }
+  }
+}
+.scroll-down
+  position: absolute
+  bottom: 10px
+  font-size: 40px
+  color: #ccc
+  padding-left: 30px
+  padding-right: 30px
+  cursor: pointer
+  margin-left: -30px
+  transition: all .7s
+.scroll-down-effects
+  animation: scroll-down-effect 2s infinite
+  @keyframes scroll-down-effect
+    0%
+      opacity: 1
+      translate: 0 0
+    50%
+      opacity: .4
+      translate: 0 -15px
+    100%
+      opacity: 1
+      translate: 0 0
+
+.article-post
+  margin 20px

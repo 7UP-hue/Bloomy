@@ -1,0 +1,32 @@
+<% if(path == 'index.html') { %>
+  <div>
+<% } %>
+<% if(path != 'index.html') { %>
+  <div style="display: none">
+<% } %>
+  <div class="w-bg">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+  </div>
+  <div class="show-sth">
+    <div class="show-title">
+      <div class="title-rase-in">
+        <!-- <span>Live a good life meet slowly</span> -->
+        <% var content = 'Live a good life meet slowly' %>
+        <% for(var i = 0; i < content.length; i++) { %>
+          <span><%= content[i] %></span>
+        <% } %>
+      </div>
+      <br>
+    </div>
+    <span class="scroll-down"><i class="fa-solid fa-angle-down scroll-down-effects"></i></span>
+  </div>
+</div>
+<script>
+  const content = 'Live a good life meet slowly';
+  var spans = document.querySelectorAll(".title-rase-in span")
+  spans.forEach((item, index) => {
+    item.style.animationDelay = Math.abs(index - 13)*0.05 + 's';
+  })
+</script>

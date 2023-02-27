@@ -1,0 +1,38 @@
+<section>
+  <div class="aside">
+    <div class="aside-item">
+      <div class="self-intro">
+        <img src="https://avatars.githubusercontent.com/u/93071991?v=4" width="70%" class="avatar" />
+        <div class="self-name">
+          <%- theme.username %>
+        </div>
+        <div class="self-icon">
+          <a href="/" title="主页" class="self-link"><i class="fa-solid fa-house" target="_self"></i></a>
+          <a href="<%- theme.github %>" title="github" class="self-link" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="<%- theme.csdn %>" title="csdn" class="self-link" target="_blank"><i class="fa-brands fa-microblog"></i></a>
+          <a href="<%- theme.twitter %>"" class="self-link" title="twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="aside-item">
+      <div class="aside-title"><i class="fa-regular fa-folder-open" style="margin-right: 10px"></i>文章分类</div>
+      <div class="aside-content">
+        <% site.categories.each(function (category) { %>
+          <a href="<%- '/categories' + url_for(category.name) %> " class="aside-item-name" target="_self">
+            <%= category.name %>
+          </a>
+        <% }) %>
+      </div>
+    </div>
+    <div class="aside-item">
+      <div class="aside-title"><i class="fa-solid fa-clipboard" style="margin-right: 10px"></i>标签</div>
+      <div class="aside-content">
+        <% site.tags.each(function (tag) { %>
+          <a href="<%- '/tags' + url_for(tag.name) %> " class="aside-item-name" target="_self">
+            <%= tag.name %>
+          </a>
+        <% }) %>
+      </div>
+    </div>
+  </div>
+</section>

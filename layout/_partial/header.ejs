@@ -1,0 +1,23 @@
+<% if(path == 'index.html') { %>
+  <header class="header">
+<% } %>
+<% if(path != 'index.html') { %>
+  <header class="header header-last">
+<% } %>
+    <div class="title">
+      <a href="<%= url_for() %>" class="logo" target="_self">
+        <span><%= config.title %></span>
+      </a>
+    </div>
+    <nav class="navbar">
+      <ul class="menu">
+        <% for (name in theme.menu) { %>
+          <li class="menu-item">
+            <a href="<%- url_for(theme.menu[name]) %>" class="menu-item-link" target="_self">
+              <span data-text="<%- name %>"><%= name %></span>
+            </a>
+          </li>
+        <% } %> 
+      </ul>
+    </nav>
+  </header>

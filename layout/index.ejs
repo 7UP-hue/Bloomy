@@ -1,0 +1,10 @@
+<%- partial('star-bg') %>
+<% if(path == 'index.html') { %>
+  <div id="main" style="display: flex; justify-content: space-between; padding-top: 60px">
+<% } %>
+<% if(path != 'index.html') { %>
+  <div id="main" style="display: flex; justify-content: space-between;">
+<% } %>
+  <div style="width: 23%"><%- partial('_partial/aside') %></div>
+  <div style="width: 77%"><%- partial('_partial/article') %></div>
+</div>

@@ -1,0 +1,68 @@
+.toc-main
+  position: absolute
+  top: 0
+  right: 12em
+
+.toc-container
+  position: fixed
+  background: #fff
+  padding: 20px
+  box-sizing: border-box
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px 4px #ddd;
+  width: 12em
+  height: 30em
+  overflow-x: hidden
+  overflow-y: auto
+  animation: showIn .7s ease-out
+  @keyframes showIn {
+    0% {
+      height: 0em
+    }
+    100% {
+      height: 30em
+    }
+  }
+
+.toc
+  margin: 0
+  margin-block-start: 0
+  margin-block-end: 0
+  margin-inline-start: 0px
+  margin-inline-end: 0px
+  padding-inline-start: 0
+  ol 
+    padding-inline-start: 15px;
+
+.toc-container li
+  display: -webkit-box !important
+  text-overflow: ellipsis
+  overflow: hidden
+  -webkit-line-clamp: 1
+  -webkit-box-orient: vertical
+
+.toc-container a
+  color: #666
+  font-size: 16px
+  font-family: Comic Sans MS, Helvetica Neue, Microsoft Yahei, -apple-system, sans-serif;
+  transition: all .5s
+  line-height: 30px
+
+.toc-child
+  margin-block-end: 0
+  margin-block-start: 0
+  padding-inline-start: 15px
+  
+.toc-container a:hover
+  color: #44D7B6
+
+.toc-name
+  font-family: Comic Sans MS, Helvetica Neue, Microsoft Yahei, -apple-system, sans-serif;
+  color: #333
+  font-size: 18px
+  margin-bottom: 10px
+  .toc-icon
+    margin-right: 5px
+
+.toc-li-active>a
+  color: #44D7B6 !important
