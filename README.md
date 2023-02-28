@@ -1,7 +1,7 @@
 # Bloomy
 
 * 介绍：hexo主题Bloomy
-* 创作原因：想从零开始创作一个属于自己的hexo主题
+* 创作原因：想学着自己实现一个hexo主题
 * 演示地址：https://7up-hue.github.io/
 
 <img src="source/images/image1.png" />
