@@ -18,6 +18,18 @@ $(function(){
     }
   })
   /**
+   * 点击显示菜单
+   */
+  $('.menu-more').on('click', function() {
+    if($('.navbar').hasClass('navbar-show')) {
+      $('.navbar').removeClass('navbar-show')
+      $('.navbar').addClass('navbar-hide')
+    } else {
+      $('.navbar').removeClass('navbar-hide')
+      $('.navbar').addClass('navbar-show')
+    }
+  })
+  /**
    * 监听页面滚动
    */
   const hrefItems = document.querySelectorAll('a.headerlink')
@@ -29,9 +41,14 @@ $(function(){
         if(pos >= $(window).height()-80) {
         $('.scroll-top').show()
         $('.header').addClass('header-last')
+        $('.header').removeClass('header-hide')
       } else {
         $('.scroll-top').hide()
+        if($('.header').hasClass('header-last')) {
+          $('.header').addClass('header-hide')
+        }
         $('.header').removeClass('header-last')
+        $('.navbar').removeClass('navbar-show')
       }
     } 
     else {

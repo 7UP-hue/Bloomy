@@ -1,5 +1,6 @@
 .header {
-  height: 60px;
+  opacity 0
+  height: 0px;
   color: #333;
   justify-content: space-between;
   background-color: rgb(255,255,255);
@@ -14,9 +15,21 @@
   size: 0;
   width: 100%;
   z-index: 10;
-  display: none;
-  box-sizing: border-box;;
+  box-sizing: border-box
 }
+
+.header-hide {
+  opacity 1
+  height: 60px
+  animation: fadeHightOut .3s forwards
+  @keyframes fadeHightOut {
+    to {
+      height: 0px;
+      opacity: 0
+    }
+  }
+}
+
 a {
   text-decoration: none;
 }
@@ -57,3 +70,13 @@ li {
 }
 .header-last
   display: flex;
+  opacity: 1
+  animation: fadeHight .5s forwards
+  @keyframes fadeHight {
+    to {
+      height: 60px;
+    }
+  }
+
+.menu-more
+  display: none
